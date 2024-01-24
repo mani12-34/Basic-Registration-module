@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h2 class="logo">Logo</h2>
+    <nav class="navigation">
+        <button class="bthLogin-popup">Login</button>
+        <button class="bthLogin-popup">Register</button>
+    </nav>
+</header>
+<div class="wrapper">
+    <span class="icon-close">
+        <ion-icon name="close"></ion-icon>
+    </span>
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="mail"></ion-icon>
+                </span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed"></ion-icon>
+                </span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox" required>
+                    Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="bth">Login</button>
+            <div class="login-register">
+                <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-box register">
+        <h2>Registration</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="person"></ion-icon>
+                </span>
+                <input type="text" required>
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="mail"></ion-icon>
+                </span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="call-outline"></ion-icon>
+                </span>
+                <input type="email" required>
+                <label>Phone Number</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed"></ion-icon>
+                </span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox" required>
+                    I agree to the terms & conditions</label>
+            </div>
+            <button type="submit" class="bth">Register</button>
+            <div class="login-register">
+                <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+<script >
+    const wrapper = document.querySelector('.wrapper');
+    const loginLink = document.querySelector('.login-link');
+    const registerLink = document.querySelector('.register-link');
+    const bthLoginPopup = document.querySelector('.bthLogin-popup:nth-child(1)');
+    const bthRegisterPopup = document.querySelector('.bthLogin-popup:nth-child(2)');
+    const iconClose = document.querySelector('.icon-close');
+
+    //Event listeners for the navigation buttons
+    bthLoginPopup.addEventListener('click', () => openLoginForm());
+    bthRegisterPopup.addEventListener('click', () => openRegisterForm());
+
+    //Event listeners for the links inside the forms
+    registerLink.addEventListener('click', () => openRegisterForm());
+    loginLink.addEventListener('click', () => openLoginForm());
+
+    iconClose.addEventListener('click', () => closeForm());
+
+    function openLoginForm() {
+        wrapper.classList.add('active-popup');
+        wrapper.classList.remove('active');
+    }
+
+    function openRegisterForm() {
+        wrapper.classList.add('active-popup');
+        wrapper.classList.add('active');
+    }
+
+    function closeForm() {
+        wrapper.classList.remove('active-popup');
+    }
+
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
