@@ -93,7 +93,7 @@ exports.verify = async (req, res) => {
      user.verified = true;
      await user.save();
  
-     return res.status(200).send("Successfully verified");
+     return res.status(200).send('<h1>Successfully verified</h1>');
    } catch (err) {
      console.error('Error during verification:', err.message);
      return res.status(401).send("Token verification failed");
