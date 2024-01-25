@@ -68,7 +68,8 @@ exports.login = async (req, res) => {
       //        });
       //   }
         return res.status(200).send({
-             message: "User logged in"
+             message: "User logged in",
+             html:`<h1>Welcome, ${email}</h1>`
         });
      } catch(err) {
         return res.status(500).send(err);
