@@ -1,4 +1,4 @@
-This the basic registration module with html page with login and register
+This the basic registration module with html page with login and register, Open the index.html in the browser.
 
 ![project 13](https://github.com/mani12-34/Basic-Registration-module/assets/127072490/b410db6c-560c-4cba-9b85-3d3e741a2234)
 
