@@ -26,6 +26,9 @@ In the backend while trying to send a post email request by postman api  in http
 
 ![project 10](https://github.com/mani12-34/Basic-Registration-module/assets/127072490/682a9f27-0e49-460c-ac44-f70c71356269)
 
+![image](https://github.com/mani12-34/Basic-Registration-module/assets/127072490/eb4f631b-2b08-4385-8f47-61cba6a4bace)
+
+
 After that , check that the user able to login by sending the post request by postman api with the same email id in the http://localhost:3000/api/login, the user logged on .
 
 ![project 11](https://github.com/mani12-34/Basic-Registration-module/assets/127072490/101cffaf-3a1b-4d25-970e-1570a6b2d9d3)
